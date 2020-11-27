@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	
+
+<style >
+	
+
+body {
+			background: #f2f2f2;
+			height: 100vh;
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+		}
+
+
+		.form {
+			font-size: 20px;
+			text-align: center;
+			position: relative;
+			margin-left: 360px;
+			z-index: 1;
+			background-color: black;
+			max-width: 360px;
+			margin: 0 auto 100px;
+			padding: 45px;
+			opacity: 80%;
+			padding-bottom: 70px;
+		}
+
+		.form input {
+			font-family: "Roboto", Sans serif;
+			outline: 1;
+			width: 100%;
+			border: 0;
+			margin: 0 0 15px;
+			padding: 15px;
+			box-sizing: border-box;
+			font-size: 14px;
+		}
+
+		.btn {
+			font-family: "Roboto", Sans serif;
+			text-transform: uppercase;
+			outline: 0;
+			background: #4caf50;
+			width: 30%;
+			border: 0;
+			padding: 15px;
+			color: #ffffff;
+			font-size: 14px;
+			cursor: pointer;
+
+		}
+
+		h2, h5 {
+			font-family: "Roboto", Sans serif;
+			color: black;
+			background-color: transparent;
+			
+		}
+
+
+
+</style>
+
+	<title>Gateways Form</title>
+</head>
+<body>
+
+	<div>
+		
+		<form class="register" name="gate">
+			<h2>Gateways 2020 Registration Form</h2>
+			Name : <input type="text" input id="name" placeholder="Name"><br><br>
+			Email ID : <input type="text" input id="email" placeholder="Email ID"><br><br>
+			Branch : <input type="text" input id="branch" placeholder="Branch"><br><br>
+			College/University name : <input type="text" input id="college" placeholder="College/University name"><br><br>
+			State : <input type="text" input id="state" placeholder="State"><br><br>
+			Address : <input type="text" input id="address" placeholder="Address"><br><br>
+			Age : <input type="text" input id="age" placeholder="Age"><br><br>
+			Phone no. : <input type="text" input id="phone" placeholder="Phone no."><br><br>
+			Username : <input type="text" input id="user" placeholder="Username"><br><br>
+			Password : <input type="text" input id="pass" placeholder="Password"><br><br>
+			<button class="btn" onclick="create()">CREATE</button><br><br>
+		</form>
+
+
+		<
+
+		<script>
+
+			function create() {
+
+			var n = document.forms["gate"]["name"].value;
+			var e = document.forms["gate"]["email"].value;
+			var b = document.forms["gate"]["branch"].value;
+			var c = document.forms["gate"]["college"].value;
+			var s = document.forms["gate"]["state"].value;
+			var d = document.forms["gate"]["address"].value;
+			var a = document.forms["gate"]["age"].value;
+			var p = document.forms["gate"]["phone"].value;
+			var u = document.forms["gate"]["user"].value;
+			var w = document.forms["gate"]["pass"].value;
+			regexp = /^[A-Z]/;
+			var atem = e.indexOf("@");
+			var dotem = e.lastIndexOf(".");
+
+			if ( atem<1 || dotem<atem+2 || dotem+2>=e.length ) {
+				alert("Invalid Email ID! Please enter valid email ID!");
+			}
+
+
+
+			if( n == "") {
+            alert( "Please provide correct Name!" );
+            
+            return false;
+         	}
+
+         	if ( n=true || n == null ) {
+            	alert( "Please provide Valid Name!" );
+            
+            return false;
+            }
+
+         	if( e == "" ) {
+            alert( "Please provide correct Email!" );
+            
+            return false;
+         	}
+
+         	if( b == ""  ) {
+            alert( "Please provide a Branch!" );
+            
+            return false;
+         	}
+
+         	if ( b=true || b == null ) {
+            	alert( "Please provide Valid Branch!" );
+            
+            return false;
+            }
+
+         	if( c == "") {
+            alert( "Please provide College/University name!" );
+            
+            return false;
+         	}
+
+         	if ( c=true || c == null ) {
+            	alert( "Please provide Valid College/University!" );
+            
+            return false;
+            }
+
+         	if( s == "" ) {
+            alert( "Please provide a State!" );
+            
+            return false;
+         	}
+
+         	if ( s=true || s == null ) {
+            	alert( "Please provide Valid State!" );
+            
+            return false;
+            }
+
+         	if( d == "" ) {
+            alert( "Please provide an Address!" );
+            
+            return false;
+         	}
+
+         	if (a<0 || isNaN(a) ) {
+				alert("Enter Valid Age");
+
+			}
+
+			if (isNaN(p) || p<999999999 || p>9999999999 || p=="") {
+				alert("Enter Valid Phone Number");
+			}
+
+
+			if( u == "" ) {
+            alert( "Please provide proper Username!" );
+            
+            return false;
+         	}
+
+
+   			if (regexp.test(u)){
+   				alert("First letter should be in caps!");
+   				return false;
+   			}
+
+         	if ( u=true || u == null ) {
+            	alert( "Please provide Valid Username!" );
+            
+            return false;
+            }
+
+			
+			if( w == "" ) {
+            alert( "Please provide a Password!" );
+            
+            return false;
+         	}
+
+
+
+
+
+
+			}
+			
+
+
+
+		</script>
+
+<script>
+	
+
+	
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  
+}
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires="+d.toUTCString();
+  
+  document.cookie = cphone + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function getCookie(cphone) {
+  var phone = cname + "=";
+  
+  return "";
+}
+
+function checkCookie() {
+  var user = getCookie("username");
+  var phone = getCookie("phoneno");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+    user = prompt("Please enter your name:", "");
+    if (user != "" && user != null) {
+      setCookie("username", user, 1);
+    }
+  }
+  if (phone="") {
+  	alert("Enter phone no.");
+  	setCookie("phoneno", phone, 1);
+  }
+}
+
+
+
+
+
+
+
+</script>
+
+
+
+	</div>
+
+
+
+</body>
+</html>
